@@ -1,7 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
-        <title>Title</title>
+        <title>Autofix</title>
+          <link rel="stylesheet" href="css\styles.css">
+
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -20,9 +22,166 @@
 
     <body>
         <header>
-            <!-- place navbar here -->
+            <nav
+                class="navbar navbar-expand-sm navbar-dark bg-primary"
+            >
+                <a class="navbar-brand" href="#">Autofix</a>
+                <button
+                    class="navbar-toggler d-lg-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId"
+                    aria-controls="collapsibleNavId"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                ></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" aria-current="page"
+                                >Inicio <span class="visually-hidden">(current)</span></a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="dropdownId"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                >Servicios</a
+                            >
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <a class="dropdown-item" href="#">Lavado</a>
+                                <a class="dropdown-item" href="#">Repuestos</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="d-flex my-2 my-lg-0">
+                        <input
+                            class="form-control me-sm-2"
+                            type="text"
+                            placeholder="Search"
+                        />
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </nav>
+            
+
         </header>
-        <main></main>
+
+        <main>    
+        <div class="d-flex justify-content-center flex-wrap gap-3 mt-5" id="cards">
+            <div class="card mb-3" style="max-width: 540px;" >
+                <div class="row g-0">
+                    <div class="col-md-9">
+                        <img
+                            src="img\c1.png"
+                            class="img-fluid rounded-start"
+                            alt="Imagen de diagnóstico de auto"
+                        />
+                    </div>
+                    <div class="col-md-10">
+                        <div class="card-body">
+                            <h5 class="card-title">Diagnóstico eléctrico</h5>
+                            <p class="card-text">
+                                Diagnóstico eléctrico completo para su auto.
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted"
+                                    > >Desde $25.000 clp.</small
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card mb-3" style="max-width: 540px;" >
+                <div class="row g-0">
+                    <div class="col-md-9">
+                        <img
+                            src="img\c2.png"
+                            class="img-fluid rounded-start"
+                            alt="Imagen de cambios de frenos"
+                        />
+                    </div>
+                    <div class="col-md-10">
+                        <div class="card-body">
+                            <h5 class="card-title">Cambio de frenos</h5>
+                            <p class="card-text">
+                                Revisión y cambio de frenos.
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted"
+                              >Desde $35.000 clp.</small
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card mb-3" style="max-width: 540px;" >
+                <div class="row g-0">
+                    <div class="col-md-9">
+                        <img
+                            src="img\c3.png"
+                            class="img-fluid rounded-start"
+                            alt="Imagen logo de un aceite de auto"
+                        />
+                    </div>
+                    <div class="col-md-10">
+                        <div class="card-body">
+                            <h5 class="card-title">Cambio de aceite</h5>
+                            <p class="card-text">
+                             Cambio de aceite.
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted"
+                                    >Desde $5000 clp.</small
+                                >
+                            </p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div>
+                    <!-- Formulario de contacto-->
+            <form >
+        <label for="rut">Servicio que desea contratar:</label>
+        <input type="text" id="servicio"><br>
+
+        <label for="rut">Rut:</label>
+        <input type="text" id="rut"><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre"><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email"><br>
+
+        <label for="celular">Celular:</label>
+        <input type="tel" id="celular"><br>
+
+                <button type="submit">Confirmar</button>
+        <button type="reset">Salir</button>
+</form>
+                </div>
+
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>
