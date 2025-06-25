@@ -1,18 +1,28 @@
 $(document).ready(function() {
-  // Mostrar el modal cuando se hace clic en un botón de comprar
-  $('.btnContratar').on('click', function() {
-    $('#modal').fadeIn();
+  // Show the modal 
+  $('#btn1, #btn2, #btn3').on('click', function() {
+    $('#modal').fadeIn(); // Show the modal first
+
+    // Pre-fill the service
+    let serviceType = '';
+    if ($(this).attr('id') === 'btn1') {
+      serviceType = 'Diagnóstico eléctrico';
+    } else if ($(this).attr('id') === 'btn2') {
+      serviceType = 'Cambio de frenos';
+    } else if ($(this).attr('id') === 'btn3') {
+      serviceType = 'Cambio de aceite';
+    }
+
+    // Pre-select 
+    
+    $('#servicio option').filter(function() {
+      return $(this).text() === serviceType;
+    }).prop('selected', true);
   });
 
-  // Cerrar el modal cuando se hace clic en la X
+  // Close the modal
   $('#close-btn').on('click', function() {
     $('#modal').fadeOut();
   });
 
-  // Opcional: cerrar modal al hacer clic fuera del formulario
-  $('#modal').on('click', function(e) {
-    if ($(e.target).is('#modal')) {
-      $('#modal').fadeOut();
-    }
-  });
 });
