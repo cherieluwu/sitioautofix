@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="es">
     <head>
-        <title>Autofix</title>
-          <link rel="stylesheet" href="css\styles.css">
+        <title>Autofix= Servicio de autos a domicilio</title>
+        <link rel="stylesheet" href="css/styles.css">
 
         <!-- Required meta tags -->
         <meta charset="utf-8" />
@@ -56,7 +56,7 @@
                                 >Servicios</a
                             >
                             <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                <a class="dropdown-item" href="#">Lavado</a>
+                                <a class="dropdown-item" href="lavado.html">Lavado</a>
                                 <a class="dropdown-item" href="#">Repuestos</a>
                             </div>
                         </li>
@@ -77,13 +77,15 @@
 
         </header>
 
-        <main>    
+<main>    
+            <div class="d-flex justify-content-center flex-wrap gap-3 mt-5" >
+                <h1>Nuestras especialidades</h1></div>
         <div class="d-flex justify-content-center flex-wrap gap-3 mt-5" id="cards">
             <div class="card mb-3" style="max-width: 540px;" >
                 <div class="row g-0">
                     <div class="col-md-9">
                         <img
-                            src="img\c1.png"
+                            src="img/c1.png"
                             class="img-fluid rounded-start"
                             alt="Imagen de diagnóstico de auto"
                         />
@@ -96,9 +98,18 @@
                             </p>
                             <p class="card-text">
                                 <small class="text-muted"
-                                    > >Desde $25.000 clp.</small
-                                >
+                                 >Desde $25.000 clp.</small>
+                                 <a
+                                name="btnContratar"
+                                id=""
+                                class="btn btn-primary"
+                                href="#"
+                                role="button"
+                                >Contratar</a
+                              >
+                                    
                             </p>
+                            
                         </div>
                     </div>
                 </div>
@@ -108,7 +119,7 @@
                 <div class="row g-0">
                     <div class="col-md-9">
                         <img
-                            src="img\c2.png"
+                            src="img/c2.png"
                             class="img-fluid rounded-start"
                             alt="Imagen de cambios de frenos"
                         />
@@ -121,8 +132,18 @@
                             </p>
                             <p class="card-text">
                                 <small class="text-muted"
-                              >Desde $35.000 clp.</small
-                                >
+                              >Desde $35.000 clp.</small>
+                            <a
+                                name="btnContratar"
+                                id=""
+                                class="btn btn-primary"
+                                href="#"
+                                role="button"
+                                >Contratar</a
+                              >
+                              
+                                
+
                             </p>
                         </div>
                     </div>
@@ -133,7 +154,7 @@
                 <div class="row g-0">
                     <div class="col-md-9">
                         <img
-                            src="img\c3.png"
+                            src="img/c3.png"
                             class="img-fluid rounded-start"
                             alt="Imagen logo de un aceite de auto"
                         />
@@ -146,8 +167,13 @@
                             </p>
                             <p class="card-text">
                                 <small class="text-muted"
-                                    >Desde $5000 clp.</small
-                                >
+                                    >Desde $5000 clp.</small>
+                                    <a
+                                        name="btnContratar"
+                                        id=""
+                                        class="btn btn-primary"
+                                        href="#"
+                                        role="button">Contratar</a>
                             </p>
                             </div>
                             </div>
@@ -156,11 +182,44 @@
                 </div>
             
                 <div>
-                    <!-- Formulario de contacto-->
-            <form >
-        <label for="rut">Servicio que desea contratar:</label>
-        <input type="text" id="servicio"><br>
+                    <!-- Formulario de contacto MODAL-->
+        
+         <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="close-btn">&times;</span>
+      <h2>Formulario de contratación de servicios</h2>
+    <div>
+ <label for="servicio">Servicio:</label>
+  <select id="servicio" class="form-select form-select-lg mb-3" aria-label="Servicio">
+<option value="lavado">Lavado básico</option>
+<option value="reparacion">Reparación</option>
+<option value="cambaceite">Cambio de aceite</option>
+<option value="cambfrenos">Cambio de frenos</option>
 
+    
+    </select>  
+    <!-- hacer esto con que se mantenga el tipo de servicio de donde hiciste clic-->
+     
+     <div>
+         <select id="autos" class="form-select form-select-lg mb-3" aria-label="Autos">
+        <option selected>Tipo de automóvil</option>
+<option value="auto">Auto</option>
+<option value="camioneta">Camioneta</option>
+<option value="furgoneta">Furgoneta</option>
+<option value="moto">Motocicleta</option>
+    </select>  
+    </div>
+     <div>
+  <label for="horario">Horario:</label>
+  <select id="horario" class="form-select form-select-lg mb-3" aria-label="Horario">
+        <option selected>Horarios disponibles</option>
+        <option value>20:00 - 21:45</option>
+        <option value>21:00 - 22:45</option>
+        <option value>21:30 - 23:15</option>
+    </select>  
+     </div>
+    <form>
         <label for="rut">Rut:</label>
         <input type="text" id="rut"><br>
 
@@ -176,26 +235,44 @@
         <label for="celular">Celular:</label>
         <input type="tel" id="celular"><br>
 
-                <button type="submit">Confirmar</button>
-        <button type="reset">Salir</button>
-</form>
-                </div>
+    <div>
+  <label for="pago">Método de pago:</label>
+  <select id="pago" class="form-select form-select-lg mb-3" aria-label="Horario">
+        <option selected>Método de pago</option>
+        <option value="debito">Débito por Webpay</option>
+        <option value="credito">Crédito por Webpay</option>
+        <option value="khipu">Khipu</option>
+        <option value="compaqui">Compra aquí Banco Estado</option>
+        <option value="servipag">Servipag</option>
+    </select>  
+    </div>
+    <div>
+        <label for="numtarjeta">Número de tarjeta:</label>
+        <input type="text" id="numtarjeta"><br>
 
-        </main>
+        <label for="fechatar">Fecha de vencimiento tarjeta:</label>
+        <input type="date" id="fechatar"><br>
+
+        
+        <label for="cvvtarjeta">CVV:</label>
+        <input type="text" id="cvvtarjeta"><br>
+
+    </div>
+        <button type="submit">Confirmar reserva</button>
+        <button type="reset">Salir</button>
+      </form>
+    </div>
+  </div>
+
+
+</main>
+
         <footer>
             <!-- place footer here -->
         </footer>
         <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+   
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+     </body>   
 </html>
